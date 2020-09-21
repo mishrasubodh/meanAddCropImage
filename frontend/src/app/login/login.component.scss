@@ -1,0 +1,56 @@
+
+
+.login {
+  // background: #eceeee;
+  // border: 1px solid #42464b;
+  // border-radius: 6px;
+  // height: 257px;
+  // margin: 20px auto 0;
+  // width: 298px;
+}
+body{
+  margin: 0px !important;
+}
+
+.login-card{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 400px;
+  // border: 2px solid #111158;
+}
+.login-page{
+  background-image: url('../../assets/login-bg-1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.pull-right{
+  float: right;
+}
+.p-relative{
+  position: relative;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.example-full-width{
+  width: 100%;
+}
+.mt-15{
+  margin-top: 15px;
+}
+.rememberme{
+  align:center;
+}
+.showpasswordicon{
+  font-size: 29px;
+  text-align: center;
+}
+.forgotpassword{
+  background: lightgray;
+}

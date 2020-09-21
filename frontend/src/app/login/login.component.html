@@ -1,0 +1,36 @@
+<div class="login-page">
+  
+<mat-card class="login-card">
+    <h2 class="text-center">Login</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit(users)" class="example-form login">
+ 
+    <div *ngIf="this.users" >
+      <mat-form-field class="example-full-width form-group">
+        <input matInput placeholder="User Name" [(ngModel)]="users.username"  formControlName="Username" class="form-control" [ngClass]="{ 'is-invalid': submitted && registerForm.Username }">
+      
+      </mat-form-field>
+      <mat-form-field class="example-full-width form-group">
+        <div class="d-flex justify-content-end"><input matInput [type]="show ? 'password' : 'text'"  placeholder="Password"  [(ngModel)]="users.password"  formControlName="Password" class="form-control w-75 " [ngClass]="{ 'is-invalid': submitted && registerForm.password }">
+          <mat-icon (click)="showpassword();" class="w-25 showpasswordicon "> visibility</mat-icon></div>
+        
+        <!-- <i class="material-icons">
+          visibility
+          </i> -->
+      </mat-form-field>
+    </div>
+    <div>
+ 
+      <button mat-button class="forgotpassword" >Forgot password?</button>
+      <button mat-button class="pull-right forgotpassword" (click)="moveRegistration();">Registration</button>
+
+    </div>
+    <div class="rememberme"><mat-checkbox [checked]="checked" (change)="onChange($event); false">Remember Me</mat-checkbox></div>
+    <div class="text-center mt-15">
+    <button mat-raised-button color="primary" [disabled] ="this.registerForm.invalid" >Sign In</button>
+  </div>
+  
+</form>
+</mat-card>
+</div>
+<div>
+</div>

@@ -1,0 +1,29 @@
+<div class="login-container w-100">
+  <div class="login-content">
+    <mat-toolbar class="login-toolbar" color="primary">Edit Page</mat-toolbar>
+    <mat-card>
+      <form class="edit-user-form" [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+              <mat-form-field>
+                      <input appBlue autofocus  type="text" matInput placeholder="id" formControlName="id" readonly [(ngModel)]="editabledata._id" >
+                    </mat-form-field>
+          
+              <mat-form-field>
+                      <input  autofocus type="text" matInput placeholder="firstname" formControlName="firstname" [(ngModel)]="editabledata.firstName" >
+                    </mat-form-field>
+          
+              <mat-form-field>
+                      <input  autofocus type="text" matInput placeholder="lastname" formControlName="lastname" [(ngModel)]="editabledata.lastName">
+                    </mat-form-field>
+          
+        <mat-form-field>
+          <input autofocus  type="text" matInput placeholder="Username" formControlName="username" [(ngModel)]="editabledata.username">
+        </mat-form-field>
+
+        
+        <p class="text-center">
+          <button type="submit" mat-raised-button color="primary">Save</button>
+        </p>
+      </form>
+    </mat-card>
+  </div>
+</div>

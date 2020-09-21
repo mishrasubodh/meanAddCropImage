@@ -1,0 +1,50 @@
+<mat-card class="header"><button mat-flat-button color="primary" (click)="backtologin()">back to login</button>
+  <button mat-flat-button color="primary" (click)="gotoregistration()" class="rgbutton">go to registration</button> <h1 style="    text-align: -webkit-center; background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);">
+  Welcome to home
+
+
+  <div>
+    <input type="text"  (input)="serchInput($event)">
+  </div>
+  <!-- <mat-form-field>
+    <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto" (input)=serchInput($event)>
+  </mat-form-field>
+  
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
+  </mat-autocomplete> -->
+
+
+
+
+
+</h1> 
+  
+  
+
+
+ </mat-card>
+<div class="matTab">
+  <table class="matTab">
+    <tr class="head">
+      <td>id  <mat-divider></mat-divider></td>
+      <td>fName  <mat-divider></mat-divider></td>
+      <td>lName <mat-divider></mat-divider></td>
+      <td>userName  <mat-divider></mat-divider></td>
+      <td>edit <mat-divider></mat-divider></td>
+      <td>delete <mat-divider></mat-divider></td>
+    </tr>
+    <tr *ngFor="let i of dataSource | paginate: { itemsPerPage: 10, currentPage: p } ;let L=index;">
+       <!-- <p>{{i|json}}</p> -->
+        <td >{{ (10* (p - 1)) +i._id}}  <mat-divider></mat-divider></td>
+        <td appRedgreen>{{i.firstName}}  <mat-divider></mat-divider></td>
+        <td appBlue>{{i.lastName}} <mat-divider></mat-divider></td>
+        <td [class.text-primary]="i.username ==='ramesh@gmail.com'">{{i.username}} <mat-divider></mat-divider></td>
+      <td><button mat-flat-button color="primary" (click)="openDialog(i._id)">EDIT  <mat-divider></mat-divider></button></td>
+   
+      <td><button mat-flat-button color="warn" (click)="deletedata(i._id)">DELETE  <mat-divider></mat-divider></button></td>
+    </tr>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </table>
+</div>
+
