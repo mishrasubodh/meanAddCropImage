@@ -12,6 +12,24 @@ body {
     background-color: #e9ecef;
     border-radius: .3rem;
 }
+
+
+.form-box{  
+  background: #fff;
+ border-radius: 20px;
+ padding: 20px;
+ box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  .register {
+    text-align: center;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+  }
+  label {
+    text-transform: capitalize;
+   }
+
+ }
+ 
 // @import "app/core/scss/core";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css"
 

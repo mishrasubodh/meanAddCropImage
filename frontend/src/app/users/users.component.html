@@ -2,15 +2,16 @@
     <div class="child">
       <div class="form-block">
         <h2 style="font-size: 50px;">Welcome</h2>
-        <p style="font-size: 20px;"><span><img style="width: 30px;" src="assets/user.png"></span>{{userData.firstName}} {{userData.lastName}} </p>
+        <p style="font-size: 20px;"><span><img style="width: 30px;" src="assets/user.png"></span>{{userData.Name}} </p>
       </div>
       <div class="form-block">
         <h4 style="font-size: 20px;">Your UserName IS</h4>
-        <p style="font-size: 20px;">{{userData.username}}</p>
+        <p style="font-size: 20px;">{{userData.Email}}</p>
       </div>
       <div class="form-block">
-          <h4 style="font-size: 20px;">Do You Want TO Go UserSPage</h4>
-        <p style="font-size: 20px;">  <button mat-flat-button color="primary" (click)="goToHome();">GO To Home Page</button></p>
+        <h4 style="font-size: 20px;">Do You Want see your Profile</h4>
+        <p style="font-size: 20px;"> <button mat-flat-button color="primary" (click)="goToHome(userData.id);">GO To
+            profile Page</button></p>
 
       </div>
     </div>

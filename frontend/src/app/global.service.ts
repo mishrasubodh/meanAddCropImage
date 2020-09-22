@@ -11,7 +11,7 @@ export class GlobalService {
    }
 
 
-getlogindataonglobal(data:any){ debugger
+getlogindataonglobal(data:any){ 
 this.logindata.next(data);
   }
 

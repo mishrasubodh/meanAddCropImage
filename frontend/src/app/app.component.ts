@@ -15,10 +15,6 @@ export class AppComponent {
     private _http: HttpClient,
     private authservice:UsersService
     ) {
-    // this.authservice.getusersdata().subscribe(() => {
-    //   console.log('Http Call is success from compoennt');
-    // }, (error) => {
-    //   console.log('Http Call is failed from component');
-    // })
+    
   }
 }

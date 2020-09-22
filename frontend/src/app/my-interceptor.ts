@@ -29,13 +29,13 @@ export class MyInterceptor implements HttpInterceptor {
         event => {
           //logging the http response to browser's console in case of a success
           // if (event instanceof HttpResponse) {
-          //   console.log("api call success :", event);
+    
           // }
         },
         error => {
           //logging the http response to browser's console in case of a failuer
         //   if (event instanceof HttpResponse) {
-        //     console.log("api call error :", event);
+        
         //   }
          }
       )

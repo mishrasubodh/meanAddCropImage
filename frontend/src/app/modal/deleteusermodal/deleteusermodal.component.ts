@@ -18,14 +18,14 @@ export class DeleteusermodalComponent implements OnInit {
      private config:Config
   ) {
 
-    console.log('id on deleteuserPage',userid)
+
    }
 
   ngOnInit() {
   }
 deleteUser(userid){
   this.service.deletedata(userid).subscribe((data)=>{
-      console.log("33333",data); 
+     
       if(data['message']=='data successfuly delete') {
         this.config.openSnackBar('user successfuly remove',true)
        // this.getallusersdata();

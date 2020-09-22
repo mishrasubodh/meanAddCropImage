@@ -13,7 +13,7 @@ telicast = this.message.asObservable();
 
   edit(messge){
     this.message.next(messge) 
-    console.log('msg',this.message);
+    
   }
 
 }

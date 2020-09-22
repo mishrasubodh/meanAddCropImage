@@ -25,12 +25,8 @@ Gender:{
    },
    password:{
        type: String
-   },
-   imagePath:{
-    type: String
-
    }
-
+  
 });
 UserSChema.index({'firstName': 'text'});
 //login user schema

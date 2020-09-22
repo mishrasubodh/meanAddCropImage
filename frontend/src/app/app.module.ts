@@ -18,8 +18,6 @@ import {BasicService} from './basic.service'
 import {MatPaginator} from '@angular/material/paginator'
 //import {dialogbox } from  './home/home.component'
 import {NgxPaginationModule} from 'ngx-pagination';
-import { RedgreenDirective } from './directivs/redgreen.directive';
-import { BlueDirective } from './directivs/blue.directive';
 import { EditusermodalComponent } from './modal/editusermodal/editusermodal.component';
 import { DeleteusermodalComponent } from './modal/deleteusermodal/deleteusermodal.component';
 import { UsersComponent } from './users/users.component';
@@ -41,9 +39,6 @@ abstract class ChangeDetectorRef {
     LoginComponent,
     RegistrationComponent,
     HomeComponent,
-    //dialogbox,
-    RedgreenDirective,
-    BlueDirective,
     EditusermodalComponent,
     DeleteusermodalComponent,
     UsersComponent,

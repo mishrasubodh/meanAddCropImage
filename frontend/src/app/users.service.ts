@@ -21,7 +21,7 @@ URL:string ="http://localhost:4000/api/"
     private http:HttpClient,
   )
    {
-console.log("aaaaaa",this.URL);
+
    }
    getLogin(user) {
     const URL = this.URL + 'signup';
@@ -29,9 +29,9 @@ console.log("aaaaaa",this.URL);
   };
 
 registration(userRegistration){ 
-  console.log("aaaaaaa",userRegistration);
+ 
   const URL = this.URL + 'registration';
-  console.log("aaaaaaa",URL);
+ 
     return this.http.post(URL, userRegistration,{headers:this.httpOptions});
 };
 
@@ -42,10 +42,11 @@ return this.http.get(URL,{headers:this.httpOptions})
 
 getdatabyid(id){ 
   const URL = this.URL +'databyid/'+id;
-  return this.http.get(URL,{headers:this.httpOptions}).toPromise();
+  return this.http.get(URL,{headers:this.httpOptions});
 }
 
 putdatabyid(obj){ 
+
   const URL = this.URL +'databyid/'+obj.id;
   return this.http.put(URL,obj,{headers:this.httpOptions}).toPromise();
 }
@@ -57,10 +58,10 @@ deletedata(obj){
 
 searchText(getTextToSearch){ 
   const URL = this.URL +'searchData';
-  console.log('URLLLLLL',URL);
+  
   let a ={};
   a['firstName']= getTextToSearch;
-  console.log('URLLLLLL',a);
+ 
   return this.http.post(URL,a,{headers:this.httpOptions}).toPromise();
 }
 

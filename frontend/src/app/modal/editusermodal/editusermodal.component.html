@@ -3,23 +3,37 @@
     <mat-toolbar class="login-toolbar" color="primary">Edit Page</mat-toolbar>
     <mat-card>
       <form class="edit-user-form" [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
-              <mat-form-field>
-                      <input appBlue autofocus  type="text" matInput placeholder="id" formControlName="id" readonly [(ngModel)]="editabledata._id" >
-                    </mat-form-field>
-          
-              <mat-form-field>
-                      <input  autofocus type="text" matInput placeholder="firstname" formControlName="firstname" [(ngModel)]="editabledata.firstName" >
-                    </mat-form-field>
-          
-              <mat-form-field>
-                      <input  autofocus type="text" matInput placeholder="lastname" formControlName="lastname" [(ngModel)]="editabledata.lastName">
-                    </mat-form-field>
-          
+   
+
         <mat-form-field>
-          <input autofocus  type="text" matInput placeholder="Username" formControlName="username" [(ngModel)]="editabledata.username">
+          <input autofocus type="text" matInput placeholder="Name" formControlName="Name"
+            [(ngModel)]="editabledata.Name">
         </mat-form-field>
 
-        
+        <mat-form-field>
+          <input autofocus type="date" matInput placeholder="DateofBirth" formControlName="DateofBirth"
+            [(ngModel)]="editabledata.DateofBirth">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input autofocus type="text" matInput placeholder="Gender" formControlName="Gender"
+            [(ngModel)]="editabledata.Gender">
+        </mat-form-field>
+        <mat-form-field>
+          <input autofocus type="email" matInput placeholder="Email" formControlName="Email"
+            [(ngModel)]="editabledata.Email">
+        </mat-form-field>
+        <mat-form-field>
+          <input autofocus type="number" matInput placeholder="MobileNumber" formControlName="MobileNumber"
+            [(ngModel)]="editabledata.MobileNumber">
+        </mat-form-field>
+        <input type="file" (change)="fileChangeEvent($event)" />
+        <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="4 / 3"
+          format="png" (imageCropped)="imageCropped($event)" (loadImageFailed)="loadImageFailed()"></image-cropper>
+        <div class="imgbox">
+          <img [src]="croppedImage" />
+        </div>
+
         <p class="text-center">
           <button type="submit" mat-raised-button color="primary">Save</button>
         </p>
